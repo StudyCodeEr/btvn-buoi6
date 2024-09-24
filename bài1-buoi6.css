@@ -1,0 +1,279 @@
+*{
+    box-sizing: border-box;
+    padding:0px;
+    margin:0px;
+
+}
+html {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+    background-color: #170f23;
+  }
+  
+.container{
+    height: 600px;
+    width:100%;
+}
+.container .text h1{
+    font-size:40px;
+    color:rgb(255, 255, 255);
+    padding:50px 50px 10px 50px;
+}
+.container .text h2{
+    font-size:25px;
+    color:rgb(255, 255, 255);
+    padding:0px 50px 5px 50px;
+}
+.container .playlist{
+    display:flex;
+    flex-direction: row;
+    margin:50px;
+    justify-content: space-between;
+    width:80%;
+}
+.container .playlist .list{
+    width: 200px;
+    height:300px;
+    overflow:hidden;
+    position:relative;
+}
+.container .playlist .list .img,.filter,.icon{
+    width: 200px;
+    height:200px;
+    position:absolute;
+}
+.container .playlist .list .img{
+    width:200px;
+    height:200px;
+    overflow:hidden;
+    border-radius: 10px;
+}
+.container .playlist .list .img img{
+    width:200px;
+    background-size: contain;
+    border-radius: 10px;
+    transition:0.4s;
+}
+.container .playlist .list .text{
+    color:white;
+    position:absolute;
+    z-index: 1;
+    top:220px;
+}
+.container .playlist .list .text h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+.container .playlist .list .text p{
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 200;
+}
+.container .playlist .list .icon{
+    position:absolute;
+    top:90px;
+    font-size:25px;
+    text-align: center;
+    color:white;
+    z-index: 1;
+    transition:0.4s;
+} 
+.container .playlist .list .icon i{
+    margin:10px;
+    opacity:0;
+    transition:0.4s;
+}
+.container .playlist .list:hover .icon i{
+    opacity:1;
+}
+.container .playlist .list:hover .filter{
+    background-color: black;
+    opacity:0.5;
+}
+.container .playlist .list:hover img{
+    transform: scale(1.1);
+}
+.search-content {
+    position: relative;
+    border-radius: 20px;
+    height: 40px;
+    background-color: rgb(87, 56, 97);
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding-left: 10px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+
+  
+  .bar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .bar-content .level-bar {
+    position: relative;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-right: 10px; /* Tạo khoảng cách giữa nút tìm kiếm và input */
+    cursor: pointer;
+    color: #eee;
+  }
+  
+  .level-bar {
+    display: flex;
+    width: 90%;
+  }
+  
+  .search-content input {
+    color: #eee;
+    margin: 0;
+    width: 85%; /* Sử dụng toàn bộ không gian còn lại */
+    font-size: 14px;
+    background-clip: padding-box;
+    height: 34px;
+    padding: 0 10px;
+    line-height: 34px;
+    border: none;
+    background: transparent; /* Làm nền trong suốt để hiện màu nền của cha */
+  }
+  
+  .bar-content .bar-left .form-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-button {
+    border-radius: 999px;
+    font-size: 14px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .bar-content {
+    display: flex;
+    justify-content: space-between; /* Căn chỉnh khoảng cách giữa các phần */
+    margin-left: 20px;
+  }
+    .user{
+    max-width: 500px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  .bar-content {
+    display: flex;
+    justify-content: space-between; /* Đẩy các phần tử ra hai đầu */
+    align-items: center;
+    width: 100vw; /* Đảm bảo thanh chiếm toàn bộ chiều ngang */
+    padding: 0 10px; /* Thêm đệm ở hai bên */
+    box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến kích thước tổng */
+}
+
+.bar-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Cho phép thanh tìm kiếm chiếm toàn bộ không gian còn lại */
+}
+
+.bar-right {
+    display: flex;
+    justify-content: flex-end; /* Đẩy biểu tượng user ra ngoài cùng bên phải */
+    align-items: center;
+    margin-left: auto; /* Đảm bảo phần này đẩy hết cỡ về bên phải */
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(87, 56, 97);
+    cursor: pointer;
+}
+
+.user i {
+    font-size: 20px;
+    color: #eee;
+}
+
+/* Media Query: Thu nhỏ thanh tìm kiếm và dịch icon user khi cửa sổ nhỏ hơn */
+@media (max-width: 768px) {
+    .bar-left {
+        flex-grow: 0; /* Giới hạn phần tìm kiếm không chiếm quá nhiều chỗ */
+        flex-basis: 80%; /* Thanh tìm kiếm chiếm 80% chiều rộng */
+    }
+
+    .bar-right {
+        flex-basis: 20%; /* Icon user chiếm phần còn lại */
+    }
+}
+
+@media (max-width: 480px) {
+    .bar-left {
+        flex-basis: 70%; /* Thanh tìm kiếm sẽ chiếm 70% khi thu nhỏ hơn nữa */
+    }
+
+    .bar-right {
+        flex-basis: 30%; /* Icon user chiếm 30% khi thu nhỏ */
+    }
+}
+@media (min-width: 1000px) {
+    .bar-left {
+        flex-grow: 0; /* Giới hạn phần tìm kiếm không chiếm quá nhiều chỗ */
+        flex-basis: 30%; /* Thanh tìm kiếm chiếm 80% chiều rộng */
+    }
+
+    .bar-right {
+        flex-basis: 10%; /* Icon user chiếm phần còn lại */
+    }
+}
+hr{
+    border: none;
+    border-top: 2px solid rgb(87, 56, 97); /* Tạo đường viền trên với màu và độ dày mong muốn */
+    margin: 20px auto 20px 30px; /* Căn giữa và tạo khoảng cách trên/dưới */
+    width: 90%;
+
+}
+.container .playlist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Cho phép xuống dòng */
+    margin: 50px;
+
+    width: 80%;
+}
+.container .playlist .list {
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 10px; /* Thêm margin để tạo khoảng cách giữa các hình ảnh */
+}
+.logo {
+    height: 40px; /* Thay đổi kích thước logo */
+    margin: 10px 20px 10px 10px; /* Tạo khoảng cách giữa logo và các nút khác */
+    max-width: 100px;
+
+}
+
+
+  
