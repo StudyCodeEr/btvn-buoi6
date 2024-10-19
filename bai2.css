@@ -290,3 +290,87 @@
             left: 0%;
             width: 100%;
         }
+        @media (max-width: 960px) {
+            .nav {
+                width: 94vw;
+                margin: 5px 3vw;
+                font-size: 12px;
+            }
+
+            .left img {
+                height: 20px;
+            }
+
+            .ulc,
+            .ulcc {
+                padding: 5px 0px;
+                margin: 0px 8px;
+                position: relative;
+            }
+
+            .text {
+                left: calc(100vw - 370px);
+                bottom: 35%;
+                width: 300px;
+                font-size: calc(10px + 5vw);
+                text-align: end;
+            }
+
+            .button {
+                bottom: 15%;
+                width: calc(50px + 4vw);
+                font-size: calc(9px + 0.4vw);
+                padding: 10px 14px;
+                left: calc(48vw - 39px);
+                background-color: rgba(0, 0, 0, 0.308);
+                color: white;
+            }
+
+            .char {
+                position: absolute;
+                left: calc(0px + 5vw);
+                z-index: -100;
+                height: 60vw;
+            }
+
+            h3 {
+                margin: 10px 0px 60px 0px;
+            }
+
+            .flex {
+                grid-template-columns: repeat(2, 2fr);
+                gap: 6vw;
+            }
+
+            .sp {
+                width: 34vw;
+                height: 54vw;
+            }
+
+            .sp img {
+                width: 34vw;
+                transition: 0.7s;
+            }
+
+            .cap {
+                width: 26vw;
+                top: 44vw;
+                transition: 0.7s;
+            }
+
+            .name {
+                font-size: calc(14px + 0.5vw);
+            }
+
+            .note {
+                margin-top: 0.8vw;
+                font-size: calc(10px + 0.5vw);
+            }
+
+            .cost {
+                transition: 0.7s;
+                top: 43vw;
+                right: 0.5vw;
+                font-size: calc(16px + 0.5px);
+            }
+        }
